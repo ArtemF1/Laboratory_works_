@@ -1,0 +1,108 @@
+№1
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            int a = 6;
+            int b = 8;
+            int S = a * b;
+            int P = 2 * (a + b);
+            Console.WriteLine("a = {0} , b = {1}", a, b);
+            Console.WriteLine("S = a*b = " + S);
+            Console.WriteLine("P = 2*(a+b) = " + P);
+        }
+    }
+}
+
+№2
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+          double pi = 3.14;
+            int d = 8;
+            double L = pi * d;
+            Console.WriteLine("pi = {0} , d = {1}", pi, d);
+            Console.WriteLine("L = pi*d = " + L);
+
+        }
+    }
+}
+
+
+№3
+
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            short a = 15;
+            short d = 20;
+            double s = (a + d) / 2d;
+            Console.WriteLine("(a+d)/2 = "+ s);
+
+        }
+    }
+}
+
+№4
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            int a = 20;
+            int b = 4;
+            int sum = (int)Math.Pow(a, 2) + (int)Math.Pow(b, 2);
+            int raz = (int)Math.Pow(a, 2) - (int)Math.Pow(b, 2);
+            int proiz = (int)Math.Pow(a, 2) * (int)Math.Pow(b, 2);
+            int chast = (int)Math.Pow(a, 2) / (int)Math.Pow(b, 2);
+            Console.WriteLine("a*a + b*b = {0}, a*a - b*b = {1}, a*a*b*b = {2}, (a*a)/(b*b) = {3} ", sum, raz, proiz, chast);
+
+        }
+    }
+}
+
+
+№5
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            int a = -8;
+            int b = -6;
+            int sum = (int)Math.Abs(a) + (int)Math.Abs(b);
+            int raz = (int)Math.Abs(a) - (int)Math.Abs(b);
+            int proiz = (int)Math.Abs(a) * (int)Math.Abs(b);
+            int chast = (int)Math.Abs(a) / (int)Math.Abs(b);
+            Console.WriteLine("|a| + |b| = {0}, |a| - |b| = {1}, |a|*|b| = {2}, |a|/|b| = {3} ", sum, raz, proiz, chast);
+
+
+        }
+    }
+}
+
+
+
