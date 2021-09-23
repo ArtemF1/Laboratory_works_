@@ -1,0 +1,115 @@
+№1
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            int ax = 8;
+            int ay = 4;
+            int bx = 12;
+            int by = 10;
+            double ras = Math.Sqrt(Math.Pow(bx - ax, 2) + Math.Pow(by - ay, 2));
+            Console.WriteLine(ras);
+        }
+    }
+}
+
+#2
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            int a = 10;
+            int b = 15;
+            int c = 19;
+            int dlinaAC = c - a;
+            Console.WriteLine("c - a = " + dlinaAC);
+        }
+    }
+}
+
+#3
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            int a = 10;
+            int b = 19;
+            int c = 15;
+            int dlinaAC = c - a;
+            int dlinaBC = b - a;
+            int proiz = dlinaAC * dlinaBC;
+            Console.WriteLine("(c - a)*(b-c) = " + proiz);
+        }
+    }
+}
+
+#4
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            int ax = 3;
+            int ay = 10;
+            int bx = 10;
+            int by = 15;
+            int cx = 15;
+            int cy = 2;
+            double rasAB = Math.Sqrt(Math.Pow(bx - ax, 2) + Math.Pow(by - ay, 2));
+            double rasBC = Math.Sqrt(Math.Pow(cx - bx, 2) + Math.Pow(cy - by, 2));
+            double S = rasAB * rasBC;
+            double P = 2 * rasAB + 2 * rasBC;
+            Console.WriteLine("S = AB*BC = " + S);
+            Console.WriteLine("P = 2AB + 2BC = " + P);
+
+
+        }
+    }
+}
+
+#5
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            int ax = 2;
+            int ay = 3;
+            int bx = 2;
+            int by = 8;
+            int cx = 8;
+            int cy = 3;
+            double rasAB = Math.Sqrt(Math.Pow(bx - ax, 2) + Math.Pow(by - ay, 2));
+            double rasAC = Math.Sqrt(Math.Pow(cx - ax, 2) + Math.Pow(cy - ay, 2));
+            double rasBC = Math.Sqrt(Math.Pow(cx - bx, 2) + Math.Pow(cy - by, 2));
+            double S = rasAB * rasAC / 2;
+            double P = rasAB + rasAC + rasBC;
+            Console.WriteLine("S = AB * AC /2 = " + S);
+            Console.WriteLine("P = AB + BC + AC = " + P);
+
+
+        }
+    }
+}
+
