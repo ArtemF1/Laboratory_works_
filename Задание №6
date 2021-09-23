@@ -1,0 +1,106 @@
+№1
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            byte A = 8;
+            byte B = 15;
+            byte C = 0;
+            if (A != B)
+            {
+                C = A;
+                A = B;
+            }
+            if (A == B)
+            {
+                B = C;
+            }
+            Console.WriteLine(A);
+            Console.WriteLine(B);
+
+
+        }
+    }
+}
+
+№2
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            string A = "World";
+            string B = "!";
+            string C = "Hello";
+            string D = "0";
+            string E = "0";
+            if (A != B)
+            {
+                D = B;
+                B = A;
+            }
+            if (B != C)
+            {
+                E = C;
+                C = D;
+                 
+            }
+            if ( C != A)
+            {
+                A = E;
+            }
+            Console.WriteLine(A);
+            Console.WriteLine(B);
+            Console.WriteLine(C);
+
+
+        }
+    }
+}
+
+#3
+
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            char A = 'A';
+            char B = 'B';
+            char C = 'C';
+            char D = 'D';
+            char E = 'E';
+            if (C != A)
+            {
+                D = C;
+                C = A;
+            }
+            if (D != B)
+            {
+                E = B;
+                B = D;
+            }
+            if(E != A)
+            {
+                A = E;
+            }
+            Console.WriteLine(A);
+            Console.WriteLine(B);
+            Console.WriteLine(C);
+        }
+    }
+}
+
+#4
