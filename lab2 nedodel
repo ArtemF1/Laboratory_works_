@@ -1,0 +1,52 @@
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int a;
+	float b;
+	int c;
+	int d;
+	cout << "a= ";
+	cin >> a;
+	cout << "b= ";
+	cin >> b;
+	cout << "c= ";
+	cin >> c;
+	d = a * b + a * c;
+	cout << "a * b + a * c = ";
+	cout << d << endl;
+
+	if (b < a * c) {
+		b = b + a + c;
+		cout << "b = b + a + c = ";
+		cout << b << endl;
+	}
+	else if (b = a * c) {
+		b = b * b;
+		cout << "b = b * b = ";
+		cout << b << endl;
+	}
+	else {
+		b = b - a - c;
+		cout << "b = b - a - c = ";
+		cout << b << endl;
+	}
+
+	if (b < a + c) {
+		b = b - c;
+	}
+	else {
+		b = b + c;
+	}
+	
+	for (b; b > c; --b) {
+		c = c + 2;
+	}
+	cout << b;
+		
+	
+
+
+}
