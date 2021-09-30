@@ -1,4 +1,4 @@
-№1
+#1
 using System;
 
 namespace ConsoleApp1
@@ -7,28 +7,18 @@ namespace ConsoleApp1
     {
         static void Main()
         {
-            byte A = 8;
-            byte B = 15;
-            byte C = 0;
-            if (A != B)
-            {
-                C = A;
-                A = B;
-            }
-            if (A == B)
-            {
-                B = C;
-            }
-            Console.WriteLine(A);
-            Console.WriteLine(B);
-
-
+         
+            int A = 6; // две целочисленные переменные A и B
+            int B = 8;
+            A = A + B; // считаем сумму всех чисел
+            B = A - B; // чтобы поменять местами A и B, нужно в B присвоить значение всей суммы минус значение B, тогда значение А будет стоять в значении В
+            A = A - B; // чтобы поменять значение в А, нужно в А присвоить значение всей суммы - значение новое значение В
+            Console.WriteLine("A = {0}", A); // выводим начальные данные 
+            Console.WriteLine("B = {0}", B);  // выводим результаты
         }
     }
 }
-
-№2
-
+#2
 using System;
 
 namespace ConsoleApp1
@@ -37,38 +27,20 @@ namespace ConsoleApp1
     {
         static void Main()
         {
-            string A = "World";
-            string B = "!";
-            string C = "Hello";
-            string D = "0";
-            string E = "0";
-            if (A != B)
-            {
-                D = B;
-                B = A;
-            }
-            if (B != C)
-            {
-                E = C;
-                C = D;
-                 
-            }
-            if ( C != A)
-            {
-                A = E;
-            }
-            Console.WriteLine(A);
-            Console.WriteLine(B);
-            Console.WriteLine(C);
-
+            int A = 6; // создаем три целочисленные переменные
+            int B = 8;
+            int C = 10;
+            A = A + B + C; // сумма всех значений
+            B = A - B - C; // чтобы поменять значение из А в В нужно из всей суммы вычесть значение В и значение С
+            C = A - B - C; // чтобы поменять значение из В в С, нужно из всей суммы вычесть новое значение В и вычесть значение С
+            A = A - B - C; // чтобы поменять значение из С в А, нужно из всей суммы вычесть новое значение В и новое значение С
+            Console.WriteLine("A = 6, B = 8, C = 10"); // выводим начальные данные
+            Console.WriteLine("A = {0}, B = {1}, C = {2}", A, B, C); // выводим результаты
 
         }
     }
 }
-
 #3
-
-
 using System;
 
 namespace ConsoleApp1
@@ -77,30 +49,87 @@ namespace ConsoleApp1
     {
         static void Main()
         {
-            char A = 'A';
-            char B = 'B';
-            char C = 'C';
-            char D = 'D';
-            char E = 'E';
-            if (C != A)
-            {
-                D = C;
-                C = A;
-            }
-            if (D != B)
-            {
-                E = B;
-                B = D;
-            }
-            if(E != A)
-            {
-                A = E;
-            }
-            Console.WriteLine(A);
-            Console.WriteLine(B);
-            Console.WriteLine(C);
+             int A = 4; // создаем целочисленные переменные
+            int B = 6;
+            int C = 8;
+            A = A + B + C; // ищем сумму всех переменных
+            C = A - B - C; // чтобы поменять значение из А в С нужно из всей суммы вычесть значение В и значение С
+            B = A - B - C; // чтобы поменять значение из С в В нужно из всей суммы вычесть значение В и новое значение С
+            A = A - B - C; // чтобы поменять значение из В в А нужно из всей суммы вычесть новое значение В и новое значение С
+            Console.WriteLine("A = 4, B = 6, C = 8"); // выводим начальные данные
+            Console.WriteLine("A = {0}, B = {1}, C = {2}", A, B, C); // выводим результаты
+
         }
     }
 }
-
 #4
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+             int y; // создаем целочисленную переменную
+            Console.WriteLine("Введите число x: "); // пишем в консоль 
+            int x = Convert.ToInt32(Console.ReadLine()); // в целочисленную переменную x вводим через консоль значение
+            y = 3 * (int)Math.Pow(x, 6) - 6 * (int)Math.Pow(x, 2) - 7; // считаем значение функции
+            Console.WriteLine("y ={0}", y); // выводим полученный результат
+
+        }
+    }
+}
+#5
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            int y; // созлаем целочисленную переменную 
+            Console.WriteLine("Введите число x: "); // пишем в консоль
+            int x = Convert.ToInt32(Console.ReadLine()); // в целочисленную переменную x вводим значение через консоль
+            y = 4 * (int)Math.Pow(x - 3, 6) - 7 * (int)Math.Pow(x - 3, 3) + 2; // считаем значение функции
+            Console.WriteLine("y = {0}", y); // выводим результат в консоль
+
+
+        }
+    }
+}
+#6
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+           int A = 2; // создаем целочисленную переменную А 
+            int B = A * A * A * A * A * A; // создаем дополнительную целочисленную переменную со значением А в степени 5
+            int C; // создаем переменную целочисленную для вывода результата
+            C = B * A * A; // с помощью трех операций умножения мы добиваемся значения А в 8 степени
+            Console.WriteLine(C); //  выводим результат
+        }
+    }
+#7
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+              int A = 2; // создаем целочисленную переменную А
+            int B = A * A * A * A; // создаем дополнительную целочисленную переменную со значением А в степени 4
+            int C = A * A * A; // создаем дополнительную целочисленную переменную со значением А в степени 3
+            int D; // создаем целочисленную переменную для вывода результата
+            D = B * B * C * C * A; // при помощи пяти операций умножения мы получаем А в степери 15
+            Console.WriteLine(D); //  выводим результат
+        }
+    }
+}
