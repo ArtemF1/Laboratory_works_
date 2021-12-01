@@ -1,0 +1,152 @@
+1.
+using System;
+
+namespace _7_лаба
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Сколько градусов угол? (0 < α < 360) ");
+            double Grad = Convert.ToDouble(Console.ReadLine());
+            if(Grad > 360 || Grad < 0)
+            {
+                Console.WriteLine("Неправильно указаны градусы");
+            }
+            else
+            Console.WriteLine(Grad/180 + " п радианов");
+        }
+    }
+}
+
+2.
+using System;
+
+namespace _7_лаба
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Сколько радианов угол? (0 < α < 2•π) ");
+            double Grad = Convert.ToDouble(Console.ReadLine());
+            if (Grad > 2 || Grad < 0)
+            {
+                Console.WriteLine("Неправильно указаны радианы");
+            }
+            else
+                Console.WriteLine(Grad *180 + " градусов");
+        }
+    }
+}
+
+3.
+using System;
+
+namespace _7_лаба
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("X кг конфет?");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Стоимость A?");
+            int a = Convert.ToInt32(Console.ReadLine());
+            double odin = a / x;
+            Console.WriteLine("Y кг конфет?");
+            int y = Convert.ToInt32(Console.ReadLine());
+            double stoimosty = odin * y;
+            Console.WriteLine("{0} - стоимость 1 кг конфет, {1} - стоимость {2} кг конфет  ", odin,stoimosty,y);
+        }
+    }
+}
+
+4.
+using System;
+
+namespace _7_лаба
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Скорость первого автомобиля(км/ч)?");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Скорость второго автомобиля(км/ч)?");
+            int y = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Расстояние между ними?");
+            int s = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Время движения автомобилей(ч)?");
+            int t = Convert.ToInt32(Console.ReadLine());
+            int ras = x * t + y * t + s;
+            Console.WriteLine("{0} км - расстояние между автомобилями ", ras);
+        }
+    }
+}
+5.
+using System;
+
+namespace _7_лаба
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("A(кроме 0)?");
+            double a = Convert.ToDouble(Console.ReadLine());
+            if (a == 0)
+                Console.WriteLine("нельзя 0");
+            else
+            {
+                Console.WriteLine("B?");
+                double b = Convert.ToDouble(Console.ReadLine());
+                double x = -b / a;
+                Console.WriteLine("Ax + B = 0, {1}x + {2} = 0,  x = {0}", x,a,b);
+            }
+        }
+    }
+}
+6.
+using System;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("A1*x+B1*y=C1");
+            Console.WriteLine("A2*x+B2*y=C2");
+            Console.Write("A1= ");
+            int a1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("B1= ");
+            int b1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("C1= ");
+            int c1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("A2= ");
+            int a2 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("B2= ");
+            int b2 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("C2= ");
+            int c2 = Convert.ToInt32(Console.ReadLine());
+            double Δ = a1 * b2 + (-a2 * b1);
+            double Δ_1 = c1 * b2 + (-c2 * b1);
+            double Δ_2 = a1 * c2 + (-a2 * c1);
+            Console.WriteLine("{0} * {1} + (-{2} * {3}) = {4} ", a1, b2, a2, b1, Δ);
+            Console.WriteLine("{0} * {1} + (-{2} * {3}) = {4} ", c1, b2, c2, b1, Δ_1);
+            Console.WriteLine("{0} * {1} + (-{2} * {3}) = {4} ", a1, c2, a2, c1, Δ_2);
+            double x = Δ_1 / Δ;
+            double y = Δ_2 / Δ;
+            Console.WriteLine("x = {0} / {1} = {2})", Δ_1, Δ, x);
+            Console.WriteLine("y = {0} / {1} = {2})", Δ_2, Δ, y);
+            Console.Write("x= ");
+            Console.WriteLine(x);
+            Console.Write("y= ");
+            Console.WriteLine(y);
+        }
+    }
+}
+
+
+
