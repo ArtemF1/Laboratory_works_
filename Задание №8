@@ -1,0 +1,151 @@
+#1
+using System;
+
+namespace _8_ВВП
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Размер файла в байтах равен: ");
+            double b = Convert.ToDouble(Console.ReadLine());
+            b = b / 1024;
+            b = Convert.ToInt32(Math.Ceiling(b));
+            Console.WriteLine(b);
+        }
+    }
+}
+
+#2
+using System;
+
+namespace _8_ВВП
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Целое число А = ");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Целое число B (меньшее A) = ");
+            int B = Convert.ToInt32(Console.ReadLine());
+            double x = A / B;
+            x = Convert.ToInt32(Math.Floor(x));
+            Console.WriteLine("{0} - столько отрезков B помещается на отрезке A", x);
+        }
+    }
+}
+#3
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Целое число А = ");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Целое число B (меньшее A) = ");
+            int B = Convert.ToInt32(Console.ReadLine());
+            double x = A / B;
+            x = Convert.ToInt32(Math.Floor(x));
+            x = A - x * B;
+            Console.WriteLine("{0} - столько длина незанятой часто отрезка A", x);
+        }
+    }
+}
+№4
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Трехзначное число: ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            if(x<100 && x > 999)
+            {
+                Console.WriteLine("Вы ввели не трехзначное число!");
+            }
+            else
+            {
+                int a = x / 100;
+                int b = x / 10 % 10;
+                int c = x % 10;
+                int f = 0;
+                Console.WriteLine("Какая цифра будет стоять на первом месте? {0} , {1} , {2} ", a, b, c);
+                int d = Convert.ToInt32(Console.ReadLine());
+                if (d != a && d != b && d != c)
+                {
+                    Console.WriteLine("Вы ввели несуществующую цифру в этом числе!");
+                }
+                else
+                {
+                    int end = d * 100;
+                    if (d == a)
+                    {
+                        Console.WriteLine("Какая цифра будет стоять на первом месте?  {0} , {1} ", b, c);
+                    }
+                    else if (d == b)
+                    {
+                        Console.WriteLine("Какая цифра будет стоять на первом месте?  {0} , {1} ", a, c);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Какая цифра будет стоять на первом месте?  {0} , {1} ", a, b);
+                    }
+                    int e = Convert.ToInt32(Console.ReadLine());
+                    if (e != a && e != b && e != c)
+                    {
+                        Console.WriteLine("Вы ввели несуществующую цифру в этом числе!");
+                    }
+                    else
+                    {
+                        if (a != d && a != e)
+                            f = a;
+                        else if (b != d && b != e)
+                            f = b;
+                        else
+                            f = c;
+                        end = end + e*10+f;
+                        Console.WriteLine("Составленное вами слово = {0}", end);
+
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+#5
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Введите трехзначное число: ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            int y = x;
+            if (x < 100 || x > 999)
+            {
+                Console.WriteLine("Вы ввели не трехзначное число!");
+            }
+            else
+            {
+                int a = x / 100;
+                int b = x / 10 % 10;
+                int c = x % 10;
+                x = b * 100 + c * 10 + a;
+                Console.WriteLine("Полученное число = {1}\t{0} ", x, y);
+            }
+        }
+    }
+}
+
