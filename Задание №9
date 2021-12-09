@@ -1,0 +1,113 @@
+№1
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Введите целое число секунд: ");
+            int t = Convert.ToInt32(Console.ReadLine());
+            int x = t / 60;
+            x = t - x * 60;
+            Console.WriteLine("{0} - столько секунд прошло с начала последней минуты",x);
+            
+        }
+    }
+}
+
+№2
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Введите число от 1 до 365, чтобы узнать какой это день недели: ");
+            int t = Convert.ToInt32(Console.ReadLine());
+            t = t % 7;
+            Console.WriteLine(t);
+            
+        }
+    }
+}
+
+№3
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Введите число от 1 до 365, чтобы узнать какой это день недели: ");
+            int t = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите какой день недели будет 1-го января(1 — понедельник, 2 — вторник, . . . , 6 — суббота, 7 — воскресенье.) : ");
+            int n = Convert.ToInt32(Console.ReadLine());
+        int D = ((t + n - 2) % 7) +1;
+            Console.WriteLine("Номер недели = {0}", D);
+        }
+    }
+}
+№4
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("A = ");
+            double A = Convert.ToInt32(Console.ReadLine());
+            Console.Write("B = ");
+            double B = Convert.ToInt32(Console.ReadLine());
+            Console.Write("C = ");
+            double C = Convert.ToInt32(Console.ReadLine());
+            double AB = A * B;
+            Console.WriteLine("Площадь прямоугольника со сторонами A и B = {0}",AB);
+            double CC = C * C;
+            Console.WriteLine("Площадь квадрата со стороной C = {0}", CC);
+            double k = (Math.Truncate(A / C) * Math.Truncate(B / C));
+            Console.WriteLine("Количество квадратов размещенных на прямоугольнике со сторонами A и B без наложения = {0}  ",k);
+            double s = AB - k * CC;
+            Console.WriteLine("Площадь незанятой части прямоугольника = {0}  ", s);
+        }
+    }
+}
+
+№5
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Введите номер любого года : ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            if (x < 0)
+            {
+                Console.Write("Error");
+            }
+            else
+            {
+                int a = x % 10;
+                int b = x % 100;
+                if (a == 0 && b == 0)
+                {
+                    x = x / 100;
+                    Console.WriteLine("Номер столетия: {0}", x);
+                }
+                else
+                {
+                    x = x / 100 + 1;
+                    Console.WriteLine("Номер столетия: {0}", x);
+                }
+            }
+        }
+    }
+}
