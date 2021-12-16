@@ -1,0 +1,103 @@
+№1
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Цена 1 кг конфет: ");
+            double x = Convert.ToDouble(Console.ReadLine());
+            for(double i = 1; i < 11; i = i + 1)
+            {
+                Console.WriteLine("{0} кг конфет стоит {1}", i/ 10, x * i/10);
+            };
+        }
+    }
+}
+№2
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("N(>0): ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            for(double i = 11; i < 11+x; i = i + 1)
+            {
+                Console.WriteLine("{0} * {1} = {2}",x,i/10,x*i/10);
+            };
+        }
+    }
+}
+№3
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("N(>0): ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            int d = 0;
+            for(int i = 1;i <= 2*x-1; i +=2)
+            {
+                Console.WriteLine("{0} + {1} = {2}", d, i, d + i);
+                d += i;
+            }
+        }
+    }
+}
+№4
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("A: ");
+            double A = Convert.ToDouble(Console.ReadLine());
+            Console.Write("N(>0): ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            double d = 1;
+            for (double i = 1; i <= N; i++ )
+            {
+                d = d + Math.Pow(A, i);
+            }
+            Console.WriteLine(d);
+        }
+    }
+}
+№5
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("A: ");
+            double A = Convert.ToDouble(Console.ReadLine());
+            Console.Write("N(>0): ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            double d = 1;
+            int k = 1;
+            for (double i = 1; i <= N; i++ )
+            {
+                k = k * -1;
+                d = d + k * Math.Pow(A, i);
+            }
+            Console.WriteLine(d);
+
+        }
+    }
+}
