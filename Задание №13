@@ -27,10 +27,15 @@ namespace ConsoleApp1
         {
             Console.WriteLine("N(>0): ");
             int x = Convert.ToInt32(Console.ReadLine());
-            for(double i = 11; i < 11+x; i = i + 1)
+            double k = 1.1;
+            double g = 1.1;
+            for(double i = 1; x > i; i++)
             {
-                Console.WriteLine("{0} * {1} = {2}",x,i/10,x*i/10);
-            };
+                g = g + 0.1;
+                k = k * g;
+
+            }
+            Console.WriteLine(k);
         }
     }
 }
