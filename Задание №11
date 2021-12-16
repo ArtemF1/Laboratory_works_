@@ -1,0 +1,215 @@
+№1
+using System;
+
+namespace _7_лаба
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Введите значение A: ");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите значение B: ");
+            int B = Convert.ToInt32(Console.ReadLine());
+            if (A > B)
+            {
+                B = A;
+                Console.WriteLine("A = {0} , B = {1}", A, B);
+            }
+            else if(B > A)
+            {
+                A = B;
+                Console.WriteLine("A = {0} , B = {1}", A, B);
+            }
+            else
+            {
+                A = 0;
+                B = 0;
+                Console.WriteLine("A = {0} , B = {1}", A, B);
+            }
+        }
+    }
+}
+№2
+using System;
+
+namespace _7_лаба
+{
+    class Program
+    {
+        static void Main()
+        {
+            int d = 0;
+            Console.WriteLine("Введите значение A: ");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите значение B: ");
+            int B = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите значение С: ");
+            int C = Convert.ToInt32(Console.ReadLine());
+            if(A >= B && B >= C)
+            {
+                d = A + B;
+                Console.WriteLine("{0} + {1} = {2}", A, B, d);
+            }
+            else if(B >= A && C >= A)
+            {
+                d = B + C;
+                Console.WriteLine("{0} + {1} = {2}", B, C, d);
+            }
+            else
+            {
+                d = A + C;
+                Console.WriteLine("{0} + {1} = {2}", A, C, d);
+            }
+        }
+    }
+}
+#3
+using System;
+
+namespace _7_лаба
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Введите значение x1: ");
+            int x1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите значение y1: ");
+            int y1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите значение x2: ");
+            int x2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите значение y2: ");
+            int y2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите значение x3: ");
+            int x3 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите значение y3: ");
+            int y3 = Convert.ToInt32(Console.ReadLine());
+            double AB = Math.Sqrt((x2 * x2 - x1 * x1) + (y2 * y2 - y1 * y1));
+            double AC = Math.Sqrt((x3 * x3 - x1 * x1) + (y3 * y3 - y1 * y1));
+            if (AB > AC)
+            {
+                Console.WriteLine("Точка B ближе и расстояние от точки B до точки A равно {0}", AB);
+            }
+            else if(AB == AC)
+            {
+                Console.WriteLine("Обе точки находятся на одинаковом расстоянии от точки А");
+            }
+            else
+            {
+                Console.WriteLine("Точка C ближе и расстояние от точки C до точки A равно {0}", AC);
+            }
+        }
+    }
+}
+#4
+using System;
+
+namespace _7_лаба
+{
+    class Program
+    {
+        static void Main()
+        {
+            
+            Console.WriteLine("Введите значение x1: ");
+            int x1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите значение y1: ");
+            int y1 = Convert.ToInt32(Console.ReadLine());
+               if(x1>0 && y1 > 0)
+            {
+                Console.WriteLine("Точка в первой координатной четверти");
+            }
+               else if(x1<0 && y1 > 0)
+            {
+                Console.WriteLine("Точка во второй координатной четверти");
+            }
+               else if(x1<0 && y1 < 0)
+            {
+                Console.WriteLine("Точка в третьей координатной четверти");
+            }
+            else
+            {
+                Console.WriteLine("Точка в четвертой координатной четверти");
+            }
+        }
+    }
+}
+№5
+using System;
+
+namespace _7_лаба
+{
+    class Program
+    {
+        static void Main()
+        {
+            
+            Console.WriteLine("Введите число A: ");
+            int A = Convert.ToInt32(Console.ReadLine());
+            if(A % 2 == 0 && A > 0)
+            {
+                Console.WriteLine("Положительное четное число");
+            }
+            else if(A % 2 == 0 && A < 0)
+            {
+                Console.WriteLine("Отрицательное четное число");
+            }
+            else if(A % 2 != 0 && A > 0)
+            {
+                Console.WriteLine("Положительное нечетное число");
+            }
+            else if(A % 2 != 0 && A < 0)
+            {
+                Console.WriteLine("Отрицательное нечетное число");
+            }
+            else
+            {
+                Console.WriteLine("Нулевое число");
+            }
+        }
+    }
+}
+№6
+using System;
+
+namespace _7_лаба
+{
+    class Program
+    {
+        static void Main()
+        {
+            
+            Console.WriteLine("Введите число A,лежащее в диапазоне 1–999 : ");
+            int A = Convert.ToInt32(Console.ReadLine());
+            if (A % 2 == 0 && A > 0 && A < 10)
+            {
+                Console.WriteLine("Четная цифра");
+            }
+            else if (A % 2 != 0 && A > 0 && A < 10)
+            {
+                Console.WriteLine("Нечетная цифра");
+            }
+            else if(A % 2 == 0 && A > 9 && A < 100)
+            {
+                Console.WriteLine("Четное двухзначное число");
+            }
+            else if(A % 2 != 0 && A > 9 && A < 100)
+            {
+                Console.WriteLine("Нечетное двухзначное число");
+            }
+            else if(A % 2 == 0 && A > 99 && A < 1000)
+            {
+                Console.WriteLine("Четное трехзначное число");
+            }
+            else if(A % 2 != 0 && A > 99 && A < 1000)
+            {
+                Console.WriteLine("Нечетное трехзначное число");
+            }
+            else
+            {
+                Console.WriteLine("Не входит в диапазон");
+            }
+        }
+    }
+}
