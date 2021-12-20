@@ -1,0 +1,147 @@
+№1
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("A: ");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.Write("B(>A): ");
+            int B = Convert.ToInt32(Console.ReadLine());
+            for (; A <= B; A = A + 1)
+            {
+                for (int i = 0; i < A; i++)
+                {
+                    Console.Write(A);
+                    Console.Write(" ");
+                }
+                Console.WriteLine(" ");
+            }
+        }
+    }
+}
+№2
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("A: ");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.Write("B(<A): ");
+            int B = Convert.ToInt32(Console.ReadLine());
+            for (; A >= B; A = A-B)
+            {
+                
+            }
+            Console.WriteLine(A);
+        }
+    }
+}
+№3
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("N(>1): ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int k = 1;
+            int s = 0;
+            while (N > s)
+            {
+                s = s + k;
+                k++;
+            }
+            Console.WriteLine("S = {0} , K = {1}",s,k-1);
+        }
+    }
+}
+№4
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            double s = 1000;
+            Console.Write("P = ");
+            int P = Convert.ToInt32(Console.ReadLine());
+            int k = 0;
+            while (s <= 1100)
+            {
+                k++;
+                s = s + s * P / 100;
+            }
+            Console.WriteLine("Месяцев = {0} , Вклад = {1}", k, s);
+        }
+    }
+}
+№5
+ using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Введите A: ");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите B: ");
+            int B = Convert.ToInt32(Console.ReadLine());
+            int nod = 0;
+            while (A != 0 && B != 0)
+            {
+                if (A >= B)
+                {
+                    A = A % B;
+                }
+                else
+                {
+                    B = B % A;       
+                }
+                 nod = A + B;
+            }
+            Console.WriteLine(nod);
+
+        }
+    }
+}
+№6
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int F1 = 1;
+            int F2 = 1;
+            int F = 0;
+            int K = 2;
+            while (F < N)
+            {
+                K++;
+                F = F2 + F1;
+                F2 = F1;
+                F1 = F;
+            }
+            Console.WriteLine(K);
+        }
+    }
+}
