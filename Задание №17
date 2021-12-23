@@ -1,0 +1,172 @@
+#1
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Введите число N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] arr = new int[N];
+            int s = 0;
+            double d = 0;
+            for (int i = 0; i < N; i++)
+            {
+                Console.Write("arr[{0}] = ", i);
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.Write("Введите число L(1 ≤ K ≤ L ≤ N): ");
+            int l = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите число K(1 ≤ K ≤ L ≤ N): ");
+            int k = Convert.ToInt32(Console.ReadLine());
+            while(k-1 <= l - 1)
+            {
+                s = s + arr[k - 1];
+                d++;
+                k++;
+            }
+            double srzn = s / d;
+            Console.WriteLine("{0} / {1} = {2}",s,d,srzn);
+        }
+    }
+}
+#2
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Введите число N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] arr = new int[N];
+            for (int i = 0; i < N; i++)
+            {
+                Console.Write("arr[{0}] = ", i);
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            int d = arr[1] - arr[0];
+           for(int i = 1; i < N;i++)
+            {
+                if(arr[i]-arr[i-1] == d)
+                {
+
+                }
+                else
+                {
+                    d = 0;
+                }
+            }
+            Console.WriteLine("Разность прогресси = {0}",d);
+        }
+    }
+}
+#3
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Введите число N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] arr = new int[N];
+            for (int i = 0; i < N; i++)
+            {
+                Console.Write("arr[{0}] = ", i);
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            int d = arr[1];
+            for(int i = 3;i<N; i = i + 2)
+            {
+                if (arr[i] < d)
+                {
+                    d = arr[i];
+                }
+                else;
+                
+            }
+            Console.WriteLine("Минимальный элемент равен {0}", d);
+        }
+    }
+}
+#4
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Введите число N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] arr = new int[N];
+            for (int i = 0; i < N; i++)
+            {
+                Console.Write("arr[{0}] = ", i);
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            int m = arr[1];
+            int n = 0;
+            for (int i = 1; i < N - 1; i++)
+            {
+                if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1])
+                {
+                    m = arr[i];
+                    n = i;
+                }
+                else;
+            }
+            Console.WriteLine("Последний локальный максимум под номером = {0} и равен он {1}", n,m);
+        }
+    }
+}
+#5
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Введите число N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] arr = new int[N];
+            for (int i = 0; i < N; i++)
+            {
+                Console.Write("arr[{0}] = ", i);
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            int m = 0;
+            int n = 0;
+            for (int i = 0; i < N; i++)
+            {
+                for(int j = 0; j < N; j++)
+                {
+                    if(arr[i] == arr[j] && i != j)
+                    {
+                        if(i > j)
+                        {
+                            m = j;
+                            n = i;
+                        }
+                        else
+                        {
+                            m = i;
+                            n = j;
+                        }
+                    }
+                }
+            }
+            Console.WriteLine("{0} {1}", m, n);
+        }
+    }
+}
