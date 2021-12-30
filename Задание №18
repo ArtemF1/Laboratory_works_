@@ -1,0 +1,225 @@
+№1
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Введите число N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] a = new int[N];
+            int[] b = new int[N];
+            Random rand = new Random();
+            for (int y = 0; y < N; y++)
+            {
+                a[y] = rand.Next(1, 30);
+                b[y] = rand.Next(1, 30);
+            }
+            Console.Write("Массив А: ");
+            foreach (int i in a)
+                Console.Write(i + " ");
+            Console.WriteLine();
+            Console.Write("Массив B: ");
+            foreach (int i in b)
+                Console.Write(i + " ");
+            for(int i = 0; i < N; i++)
+            {
+                int t = a[i];
+                a[i] = b[i];
+                b[i] = t;
+            }
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+            Console.Write("Массив A: ");
+            foreach (int i in a)
+                Console.Write(i + " ");
+            Console.WriteLine();
+            Console.Write("Массив B: ");
+            foreach (int i in b)
+                Console.Write(i + " ");
+                
+                 
+
+        }
+    }
+}
+№2
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Введите число N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] a = new int[N];
+            int[] b = new int[N];
+            int s = 0;
+            int k = 1;
+            Random rand = new Random();
+            for (int y = 0; y < N; y++)
+            {
+                a[y] = rand.Next(1, 30);
+            }
+            for(int i = 0; i < N; i++)
+            {
+                s = s + a[i];
+                b[i] = s / k;
+                k++;
+            }
+            foreach(int i in a)
+            {
+                Console.Write(i + " ");
+               
+            }
+            Console.WriteLine(" ");
+            foreach(int i in b)
+            {
+                Console.Write(i + " ");
+            }
+        }
+    }
+}
+#3
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Введите число N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] a = new int[N];
+            int k = 0;
+            Random rand = new Random();
+            for (int i = 0; i < N; i++)
+            {
+                a[i] = rand.Next(1, 30);
+            }
+            foreach (int i in a)
+            {
+                Console.Write(i + " ");
+            }
+            for (int i = N-1; i >= 0; i--)
+            {
+                if (a[i] % 2 == 1)
+                {
+                    k = a[i];
+                    break;
+                }
+            }
+            for (int i = 0; i < N; i++)
+            {
+                if (a[i] % 2 == 1)
+                {
+                    a[i] = a[i] + k;
+                }
+            }
+            Console.WriteLine(" ");
+            foreach (int i in a)
+            {
+                Console.Write(i + " ");
+            }
+        }
+    }
+}
+#4
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Введите число N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] a = new int[N];
+            int min = 40;
+            int max = 0;
+            int mi = 0;
+            int ma = 0;
+            Random rand = new Random();
+            for (int y = 0; y < N; y++)
+            {
+                a[y] = rand.Next(1, 30);
+            }
+            foreach (int i in a)
+            {
+                Console.Write(i + " ");
+            }
+            for (int i = 0; i < N; i++)
+            {
+                if (min > a[i])
+                {
+                    min = a[i];
+                    mi = i;
+                }
+                else;
+            }
+            for(int i = 0; i < N; i++)
+            {
+                if (max < a[i])
+                {
+                    max = a[i];
+                    ma = i;
+                }
+                else;
+            }
+            for (; mi < ma - 1; mi++)
+            {
+                a[mi + 1] = 0;
+            }
+            Console.WriteLine(" ");
+            foreach (int i in a)
+            {
+                Console.Write(i + " ");
+            }
+        }
+    }
+}
+#5
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] a = new int[N];
+            for(int i = 0; i < N; i++)
+            {
+                Console.Write("a[{0}] = ", i);
+                a[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            foreach(int i in a)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine(" ");
+            int a0 = a[0];
+            for (int i = 0; i < N-1; i++)
+            {
+                if (a0 > a[i + 1])
+                {
+                    a[i] = a[i + 1];
+                    a[i + 1] = a0;
+                }
+                else;
+            }
+            foreach(int i in a)
+            {
+                Console.Write(i + " ");
+            }
+        }
+    }
+}
